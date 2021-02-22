@@ -27,21 +27,21 @@ SET default_table_access_method = heap;
 -- Name: barrio; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.barrio (
+CREATE TABLE barrio (
     id integer NOT NULL,
     nombre text NOT NULL,
     loc_id integer
 );
 
 
-ALTER TABLE public.barrio OWNER TO postgres;
+ALTER TABLE barrio OWNER TO postgres;
 
 --
 -- TOC entry 208 (class 1259 OID 16450)
 -- Name: barrio_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.barrio_id_seq
+CREATE SEQUENCE barrio_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -49,7 +49,7 @@ CREATE SEQUENCE public.barrio_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.barrio_id_seq OWNER TO postgres;
+ALTER TABLE barrio_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3948 (class 0 OID 0)
@@ -57,7 +57,7 @@ ALTER TABLE public.barrio_id_seq OWNER TO postgres;
 -- Name: barrio_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.barrio_id_seq OWNED BY public.barrio.id;
+ALTER SEQUENCE barrio_id_seq OWNED BY barrio.id;
 
 
 --
@@ -65,20 +65,20 @@ ALTER SEQUENCE public.barrio_id_seq OWNED BY public.barrio.id;
 -- Name: categoria; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.categoria (
+CREATE TABLE categoria (
     id integer NOT NULL,
     nombre text NOT NULL
 );
 
 
-ALTER TABLE public.categoria OWNER TO postgres;
+ALTER TABLE categoria OWNER TO postgres;
 
 --
 -- TOC entry 210 (class 1259 OID 16462)
 -- Name: categoria_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.categoria_id_seq
+CREATE SEQUENCE categoria_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -86,7 +86,7 @@ CREATE SEQUENCE public.categoria_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.categoria_id_seq OWNER TO postgres;
+ALTER TABLE categoria_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3950 (class 0 OID 0)
@@ -94,7 +94,7 @@ ALTER TABLE public.categoria_id_seq OWNER TO postgres;
 -- Name: categoria_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.categoria_id_seq OWNED BY public.categoria.id;
+ALTER SEQUENCE categoria_id_seq OWNED BY categoria.id;
 
 
 --
@@ -102,21 +102,21 @@ ALTER SEQUENCE public.categoria_id_seq OWNED BY public.categoria.id;
 -- Name: ciudad; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.ciudad (
+CREATE TABLE ciudad (
     id integer NOT NULL,
     nombre text NOT NULL,
     dep_id integer
 );
 
 
-ALTER TABLE public.ciudad OWNER TO postgres;
+ALTER TABLE ciudad OWNER TO postgres;
 
 --
 -- TOC entry 212 (class 1259 OID 16478)
 -- Name: ciudad_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.ciudad_id_seq
+CREATE SEQUENCE ciudad_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -124,7 +124,7 @@ CREATE SEQUENCE public.ciudad_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.ciudad_id_seq OWNER TO postgres;
+ALTER TABLE ciudad_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3952 (class 0 OID 0)
@@ -132,7 +132,7 @@ ALTER TABLE public.ciudad_id_seq OWNER TO postgres;
 -- Name: ciudad_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.ciudad_id_seq OWNED BY public.ciudad.id;
+ALTER SEQUENCE ciudad_id_seq OWNED BY ciudad.id;
 
 
 --
@@ -140,7 +140,7 @@ ALTER SEQUENCE public.ciudad_id_seq OWNED BY public.ciudad.id;
 -- Name: cliente; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.cliente (
+CREATE TABLE cliente (
     id integer NOT NULL,
     nombre text NOT NULL,
     apellido text NOT NULL,
@@ -148,14 +148,14 @@ CREATE TABLE public.cliente (
 );
 
 
-ALTER TABLE public.cliente OWNER TO postgres;
+ALTER TABLE cliente OWNER TO postgres;
 
 --
 -- TOC entry 213 (class 1259 OID 16480)
 -- Name: cliente_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.cliente_id_seq
+CREATE SEQUENCE cliente_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -163,7 +163,7 @@ CREATE SEQUENCE public.cliente_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.cliente_id_seq OWNER TO postgres;
+ALTER TABLE cliente_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3954 (class 0 OID 0)
@@ -171,7 +171,7 @@ ALTER TABLE public.cliente_id_seq OWNER TO postgres;
 -- Name: cliente_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.cliente_id_seq OWNED BY public.cliente.id;
+ALTER SEQUENCE cliente_id_seq OWNED BY cliente.id;
 
 
 --
@@ -179,20 +179,20 @@ ALTER SEQUENCE public.cliente_id_seq OWNED BY public.cliente.id;
 -- Name: departamento; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.departamento (
+CREATE TABLE departamento (
     id integer NOT NULL,
     nombre text NOT NULL
 );
 
 
-ALTER TABLE public.departamento OWNER TO postgres;
+ALTER TABLE departamento OWNER TO postgres;
 
 --
 -- TOC entry 215 (class 1259 OID 16492)
 -- Name: departamento_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.departamento_id_seq
+CREATE SEQUENCE departamento_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -200,7 +200,7 @@ CREATE SEQUENCE public.departamento_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.departamento_id_seq OWNER TO postgres;
+ALTER TABLE departamento_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3956 (class 0 OID 0)
@@ -208,7 +208,7 @@ ALTER TABLE public.departamento_id_seq OWNER TO postgres;
 -- Name: departamento_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.departamento_id_seq OWNED BY public.departamento.id;
+ALTER SEQUENCE departamento_id_seq OWNED BY departamento.id;
 
 
 --
@@ -216,7 +216,7 @@ ALTER SEQUENCE public.departamento_id_seq OWNED BY public.departamento.id;
 -- Name: detalle; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.detalle (
+CREATE TABLE detalle (
     fac_num integer NOT NULL,
     pro_id integer NOT NULL,
     cantidad integer,
@@ -224,14 +224,14 @@ CREATE TABLE public.detalle (
 );
 
 
-ALTER TABLE public.detalle OWNER TO postgres;
+ALTER TABLE detalle OWNER TO postgres;
 
 --
 -- TOC entry 216 (class 1259 OID 16494)
 -- Name: detalle_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.detalle_id_seq
+CREATE SEQUENCE detalle_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -239,7 +239,7 @@ CREATE SEQUENCE public.detalle_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.detalle_id_seq OWNER TO postgres;
+ALTER TABLE detalle_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3958 (class 0 OID 0)
@@ -247,7 +247,7 @@ ALTER TABLE public.detalle_id_seq OWNER TO postgres;
 -- Name: detalle_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.detalle_id_seq OWNED BY public.detalle.id;
+ALTER SEQUENCE detalle_id_seq OWNED BY detalle.id;
 
 
 --
@@ -255,7 +255,7 @@ ALTER SEQUENCE public.detalle_id_seq OWNED BY public.detalle.id;
 -- Name: factura; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.factura (
+CREATE TABLE factura (
     numero integer NOT NULL,
     tie_id integer,
     fecha date NOT NULL,
@@ -263,14 +263,14 @@ CREATE TABLE public.factura (
 );
 
 
-ALTER TABLE public.factura OWNER TO postgres;
+ALTER TABLE factura OWNER TO postgres;
 
 --
 -- TOC entry 217 (class 1259 OID 16500)
 -- Name: factura_numero_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.factura_numero_seq
+CREATE SEQUENCE factura_numero_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -278,7 +278,7 @@ CREATE SEQUENCE public.factura_numero_seq
     CACHE 1;
 
 
-ALTER TABLE public.factura_numero_seq OWNER TO postgres;
+ALTER TABLE factura_numero_seq OWNER TO postgres;
 
 --
 -- TOC entry 3960 (class 0 OID 0)
@@ -286,7 +286,7 @@ ALTER TABLE public.factura_numero_seq OWNER TO postgres;
 -- Name: factura_numero_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.factura_numero_seq OWNED BY public.factura.numero;
+ALTER SEQUENCE factura_numero_seq OWNED BY factura.numero;
 
 
 --
@@ -294,21 +294,21 @@ ALTER SEQUENCE public.factura_numero_seq OWNED BY public.factura.numero;
 -- Name: localidad; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.localidad (
+CREATE TABLE localidad (
     id integer NOT NULL,
     nombre text NOT NULL,
     ciu_id integer
 );
 
 
-ALTER TABLE public.localidad OWNER TO postgres;
+ALTER TABLE localidad OWNER TO postgres;
 
 --
 -- TOC entry 219 (class 1259 OID 16512)
 -- Name: localidad_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.localidad_id_seq
+CREATE SEQUENCE localidad_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -316,7 +316,7 @@ CREATE SEQUENCE public.localidad_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.localidad_id_seq OWNER TO postgres;
+ALTER TABLE localidad_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3962 (class 0 OID 0)
@@ -324,7 +324,7 @@ ALTER TABLE public.localidad_id_seq OWNER TO postgres;
 -- Name: localidad_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.localidad_id_seq OWNED BY public.localidad.id;
+ALTER SEQUENCE localidad_id_seq OWNED BY localidad.id;
 
 
 --
@@ -332,7 +332,7 @@ ALTER SEQUENCE public.localidad_id_seq OWNED BY public.localidad.id;
 -- Name: precio; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.precio (
+CREATE TABLE precio (
     id integer NOT NULL,
     fecha date,
     pro_id integer NOT NULL,
@@ -340,14 +340,14 @@ CREATE TABLE public.precio (
 );
 
 
-ALTER TABLE public.precio OWNER TO postgres;
+ALTER TABLE precio OWNER TO postgres;
 
 --
 -- TOC entry 220 (class 1259 OID 16527)
 -- Name: precio_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.precio_id_seq
+CREATE SEQUENCE precio_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -355,7 +355,7 @@ CREATE SEQUENCE public.precio_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.precio_id_seq OWNER TO postgres;
+ALTER TABLE precio_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3964 (class 0 OID 0)
@@ -363,7 +363,7 @@ ALTER TABLE public.precio_id_seq OWNER TO postgres;
 -- Name: precio_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.precio_id_seq OWNED BY public.precio.id;
+ALTER SEQUENCE precio_id_seq OWNED BY precio.id;
 
 
 --
@@ -371,21 +371,21 @@ ALTER SEQUENCE public.precio_id_seq OWNED BY public.precio.id;
 -- Name: producto; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.producto (
+CREATE TABLE producto (
     id integer NOT NULL,
     nombre text NOT NULL,
     cat_id integer NOT NULL
 );
 
 
-ALTER TABLE public.producto OWNER TO postgres;
+ALTER TABLE producto OWNER TO postgres;
 
 --
 -- TOC entry 221 (class 1259 OID 16533)
 -- Name: producto_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.producto_id_seq
+CREATE SEQUENCE producto_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -393,7 +393,7 @@ CREATE SEQUENCE public.producto_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.producto_id_seq OWNER TO postgres;
+ALTER TABLE producto_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3966 (class 0 OID 0)
@@ -401,7 +401,7 @@ ALTER TABLE public.producto_id_seq OWNER TO postgres;
 -- Name: producto_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.producto_id_seq OWNED BY public.producto.id;
+ALTER SEQUENCE producto_id_seq OWNED BY producto.id;
 
 
 --
@@ -409,21 +409,21 @@ ALTER SEQUENCE public.producto_id_seq OWNED BY public.producto.id;
 -- Name: tienda; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.tienda (
+CREATE TABLE tienda (
     id integer NOT NULL,
     nombre text NOT NULL,
     bar_id integer
 );
 
 
-ALTER TABLE public.tienda OWNER TO postgres;
+ALTER TABLE tienda OWNER TO postgres;
 
 --
 -- TOC entry 223 (class 1259 OID 16562)
 -- Name: tienda_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.tienda_id_seq
+CREATE SEQUENCE tienda_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -431,7 +431,7 @@ CREATE SEQUENCE public.tienda_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tienda_id_seq OWNER TO postgres;
+ALTER TABLE tienda_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3968 (class 0 OID 0)
@@ -439,7 +439,7 @@ ALTER TABLE public.tienda_id_seq OWNER TO postgres;
 -- Name: tienda_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public.tienda_id_seq OWNED BY public.tienda.id;
+ALTER SEQUENCE tienda_id_seq OWNED BY tienda.id;
 
 
 --
@@ -447,7 +447,7 @@ ALTER SEQUENCE public.tienda_id_seq OWNED BY public.tienda.id;
 -- Name: barrio id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.barrio ALTER COLUMN id SET DEFAULT nextval('public.barrio_id_seq'::regclass);
+ALTER TABLE ONLY barrio ALTER COLUMN id SET DEFAULT nextval('barrio_id_seq'::regclass);
 
 
 --
@@ -455,7 +455,7 @@ ALTER TABLE ONLY public.barrio ALTER COLUMN id SET DEFAULT nextval('public.barri
 -- Name: categoria id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.categoria ALTER COLUMN id SET DEFAULT nextval('public.categoria_id_seq'::regclass);
+ALTER TABLE ONLY categoria ALTER COLUMN id SET DEFAULT nextval('categoria_id_seq'::regclass);
 
 
 --
@@ -463,7 +463,7 @@ ALTER TABLE ONLY public.categoria ALTER COLUMN id SET DEFAULT nextval('public.ca
 -- Name: ciudad id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.ciudad ALTER COLUMN id SET DEFAULT nextval('public.ciudad_id_seq'::regclass);
+ALTER TABLE ONLY ciudad ALTER COLUMN id SET DEFAULT nextval('ciudad_id_seq'::regclass);
 
 
 --
@@ -471,7 +471,7 @@ ALTER TABLE ONLY public.ciudad ALTER COLUMN id SET DEFAULT nextval('public.ciuda
 -- Name: cliente id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.cliente ALTER COLUMN id SET DEFAULT nextval('public.cliente_id_seq'::regclass);
+ALTER TABLE ONLY cliente ALTER COLUMN id SET DEFAULT nextval('cliente_id_seq'::regclass);
 
 
 --
@@ -479,7 +479,7 @@ ALTER TABLE ONLY public.cliente ALTER COLUMN id SET DEFAULT nextval('public.clie
 -- Name: departamento id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.departamento ALTER COLUMN id SET DEFAULT nextval('public.departamento_id_seq'::regclass);
+ALTER TABLE ONLY departamento ALTER COLUMN id SET DEFAULT nextval('departamento_id_seq'::regclass);
 
 
 --
@@ -487,7 +487,7 @@ ALTER TABLE ONLY public.departamento ALTER COLUMN id SET DEFAULT nextval('public
 -- Name: detalle id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.detalle ALTER COLUMN id SET DEFAULT nextval('public.detalle_id_seq'::regclass);
+ALTER TABLE ONLY detalle ALTER COLUMN id SET DEFAULT nextval('detalle_id_seq'::regclass);
 
 
 --
@@ -495,7 +495,7 @@ ALTER TABLE ONLY public.detalle ALTER COLUMN id SET DEFAULT nextval('public.deta
 -- Name: factura numero; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.factura ALTER COLUMN numero SET DEFAULT nextval('public.factura_numero_seq'::regclass);
+ALTER TABLE ONLY factura ALTER COLUMN numero SET DEFAULT nextval('factura_numero_seq'::regclass);
 
 
 --
@@ -503,7 +503,7 @@ ALTER TABLE ONLY public.factura ALTER COLUMN numero SET DEFAULT nextval('public.
 -- Name: localidad id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.localidad ALTER COLUMN id SET DEFAULT nextval('public.localidad_id_seq'::regclass);
+ALTER TABLE ONLY localidad ALTER COLUMN id SET DEFAULT nextval('localidad_id_seq'::regclass);
 
 
 --
@@ -511,7 +511,7 @@ ALTER TABLE ONLY public.localidad ALTER COLUMN id SET DEFAULT nextval('public.lo
 -- Name: precio id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.precio ALTER COLUMN id SET DEFAULT nextval('public.precio_id_seq'::regclass);
+ALTER TABLE ONLY precio ALTER COLUMN id SET DEFAULT nextval('precio_id_seq'::regclass);
 
 
 --
@@ -519,7 +519,7 @@ ALTER TABLE ONLY public.precio ALTER COLUMN id SET DEFAULT nextval('public.preci
 -- Name: producto id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.producto ALTER COLUMN id SET DEFAULT nextval('public.producto_id_seq'::regclass);
+ALTER TABLE ONLY producto ALTER COLUMN id SET DEFAULT nextval('producto_id_seq'::regclass);
 
 
 --
@@ -527,7 +527,7 @@ ALTER TABLE ONLY public.producto ALTER COLUMN id SET DEFAULT nextval('public.pro
 -- Name: tienda id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.tienda ALTER COLUMN id SET DEFAULT nextval('public.tienda_id_seq'::regclass);
+ALTER TABLE ONLY tienda ALTER COLUMN id SET DEFAULT nextval('tienda_id_seq'::regclass);
 
 
 --
@@ -536,7 +536,7 @@ ALTER TABLE ONLY public.tienda ALTER COLUMN id SET DEFAULT nextval('public.tiend
 -- Data for Name: barrio; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.barrio (id, nombre, loc_id) FROM stdin;
+COPY barrio (id, nombre, loc_id) FROM stdin;
 1	Castilla	1
 2	Kennedy Central	1
 3	Engativa Pueblo	2
@@ -557,7 +557,7 @@ COPY public.barrio (id, nombre, loc_id) FROM stdin;
 -- Data for Name: categoria; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.categoria (id, nombre) FROM stdin;
+COPY categoria (id, nombre) FROM stdin;
 1	Alimentos
 2	Vivienda
 3	Vestuario
@@ -576,7 +576,7 @@ COPY public.categoria (id, nombre) FROM stdin;
 -- Data for Name: ciudad; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.ciudad (id, nombre, dep_id) FROM stdin;
+COPY ciudad (id, nombre, dep_id) FROM stdin;
 1	Bogota	1
 2	Facatativa	1
 3	Medellin	2
@@ -592,7 +592,7 @@ COPY public.ciudad (id, nombre, dep_id) FROM stdin;
 -- Data for Name: cliente; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.cliente (id, nombre, apellido, ciu_id) FROM stdin;
+COPY cliente (id, nombre, apellido, ciu_id) FROM stdin;
 1	JESUS LEONEL	DELGADO	2
 2	ISIS	POPOCA	5
 3	DONAJI	ESLAVA	2
@@ -802,7 +802,7 @@ COPY public.cliente (id, nombre, apellido, ciu_id) FROM stdin;
 -- Data for Name: departamento; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.departamento (id, nombre) FROM stdin;
+COPY departamento (id, nombre) FROM stdin;
 2	Antioquia
 1	Cundinamarca
 4	Atlantico
@@ -816,7 +816,7 @@ COPY public.departamento (id, nombre) FROM stdin;
 -- Data for Name: detalle; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.detalle (fac_num, pro_id, cantidad, id) FROM stdin;
+COPY detalle (fac_num, pro_id, cantidad, id) FROM stdin;
 1	85	8	1
 1	90	9	2
 1	42	9	3
@@ -166292,7 +166292,7 @@ COPY public.detalle (fac_num, pro_id, cantidad, id) FROM stdin;
 -- Data for Name: factura; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.factura (numero, tie_id, fecha, cli_id) FROM stdin;
+COPY factura (numero, tie_id, fecha, cli_id) FROM stdin;
 1	4	2014-06-02	132
 2	8	2016-05-21	176
 3	12	2017-02-13	30
@@ -196302,7 +196302,7 @@ COPY public.factura (numero, tie_id, fecha, cli_id) FROM stdin;
 -- Data for Name: localidad; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.localidad (id, nombre, ciu_id) FROM stdin;
+COPY localidad (id, nombre, ciu_id) FROM stdin;
 1	kennnedy	1
 2	Engativa	1
 3	Teusaquillo	1
@@ -196321,7 +196321,7 @@ COPY public.localidad (id, nombre, ciu_id) FROM stdin;
 -- Data for Name: precio; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.precio (id, fecha, pro_id, valor) FROM stdin;
+COPY precio (id, fecha, pro_id, valor) FROM stdin;
 1	2013-01-01	1	7100
 2	2013-01-01	2	5500
 3	2013-01-01	3	4100
@@ -196775,7 +196775,7 @@ COPY public.precio (id, fecha, pro_id, valor) FROM stdin;
 -- Data for Name: producto; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.producto (id, nombre, cat_id) FROM stdin;
+COPY producto (id, nombre, cat_id) FROM stdin;
 1	Harina de trigo	1
 2	Harina para tortas	1
 3	Pasta para sopa	1
@@ -196933,7 +196933,7 @@ COPY public.producto (id, nombre, cat_id) FROM stdin;
 -- Data for Name: tienda; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.tienda (id, nombre, bar_id) FROM stdin;
+COPY tienda (id, nombre, bar_id) FROM stdin;
 1	Castilla I	1
 2	Castilla II	1
 3	Kennedy	2
@@ -196955,7 +196955,7 @@ COPY public.tienda (id, nombre, bar_id) FROM stdin;
 -- Name: barrio_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.barrio_id_seq', 1, false);
+SELECT pg_catalog.setval('barrio_id_seq', 1, false);
 
 
 --
@@ -196964,7 +196964,7 @@ SELECT pg_catalog.setval('public.barrio_id_seq', 1, false);
 -- Name: categoria_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.categoria_id_seq', 1, false);
+SELECT pg_catalog.setval('categoria_id_seq', 1, false);
 
 
 --
@@ -196973,7 +196973,7 @@ SELECT pg_catalog.setval('public.categoria_id_seq', 1, false);
 -- Name: ciudad_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.ciudad_id_seq', 1, false);
+SELECT pg_catalog.setval('ciudad_id_seq', 1, false);
 
 
 --
@@ -196982,7 +196982,7 @@ SELECT pg_catalog.setval('public.ciudad_id_seq', 1, false);
 -- Name: cliente_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.cliente_id_seq', 200, true);
+SELECT pg_catalog.setval('cliente_id_seq', 200, true);
 
 
 --
@@ -196991,7 +196991,7 @@ SELECT pg_catalog.setval('public.cliente_id_seq', 200, true);
 -- Name: departamento_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.departamento_id_seq', 1, false);
+SELECT pg_catalog.setval('departamento_id_seq', 1, false);
 
 
 --
@@ -197000,7 +197000,7 @@ SELECT pg_catalog.setval('public.departamento_id_seq', 1, false);
 -- Name: detalle_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.detalle_id_seq', 165466, true);
+SELECT pg_catalog.setval('detalle_id_seq', 165466, true);
 
 
 --
@@ -197009,7 +197009,7 @@ SELECT pg_catalog.setval('public.detalle_id_seq', 165466, true);
 -- Name: factura_numero_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.factura_numero_seq', 30000, true);
+SELECT pg_catalog.setval('factura_numero_seq', 30000, true);
 
 
 --
@@ -197018,7 +197018,7 @@ SELECT pg_catalog.setval('public.factura_numero_seq', 30000, true);
 -- Name: localidad_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.localidad_id_seq', 1, false);
+SELECT pg_catalog.setval('localidad_id_seq', 1, false);
 
 
 --
@@ -197027,7 +197027,7 @@ SELECT pg_catalog.setval('public.localidad_id_seq', 1, false);
 -- Name: precio_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.precio_id_seq', 445, true);
+SELECT pg_catalog.setval('precio_id_seq', 445, true);
 
 
 --
@@ -197036,7 +197036,7 @@ SELECT pg_catalog.setval('public.precio_id_seq', 445, true);
 -- Name: producto_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.producto_id_seq', 1, false);
+SELECT pg_catalog.setval('producto_id_seq', 1, false);
 
 
 --
@@ -197045,7 +197045,7 @@ SELECT pg_catalog.setval('public.producto_id_seq', 1, false);
 -- Name: tienda_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.tienda_id_seq', 1, false);
+SELECT pg_catalog.setval('tienda_id_seq', 1, false);
 
 
 --
@@ -197053,7 +197053,7 @@ SELECT pg_catalog.setval('public.tienda_id_seq', 1, false);
 -- Name: barrio barrio_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.barrio
+ALTER TABLE ONLY barrio
     ADD CONSTRAINT barrio_pkey PRIMARY KEY (id);
 
 
@@ -197062,7 +197062,7 @@ ALTER TABLE ONLY public.barrio
 -- Name: categoria categoria_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.categoria
+ALTER TABLE ONLY categoria
     ADD CONSTRAINT categoria_pkey PRIMARY KEY (id);
 
 
@@ -197071,7 +197071,7 @@ ALTER TABLE ONLY public.categoria
 -- Name: ciudad ciudad_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.ciudad
+ALTER TABLE ONLY ciudad
     ADD CONSTRAINT ciudad_pkey PRIMARY KEY (id);
 
 
@@ -197080,7 +197080,7 @@ ALTER TABLE ONLY public.ciudad
 -- Name: cliente cliente_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.cliente
+ALTER TABLE ONLY cliente
     ADD CONSTRAINT cliente_pkey PRIMARY KEY (id);
 
 
@@ -197089,7 +197089,7 @@ ALTER TABLE ONLY public.cliente
 -- Name: departamento departamento_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.departamento
+ALTER TABLE ONLY departamento
     ADD CONSTRAINT departamento_pkey PRIMARY KEY (id);
 
 
@@ -197098,7 +197098,7 @@ ALTER TABLE ONLY public.departamento
 -- Name: detalle detalle_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.detalle
+ALTER TABLE ONLY detalle
     ADD CONSTRAINT detalle_pk PRIMARY KEY (id);
 
 
@@ -197107,7 +197107,7 @@ ALTER TABLE ONLY public.detalle
 -- Name: factura factura_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.factura
+ALTER TABLE ONLY factura
     ADD CONSTRAINT factura_pkey PRIMARY KEY (numero);
 
 
@@ -197116,7 +197116,7 @@ ALTER TABLE ONLY public.factura
 -- Name: localidad localidad_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.localidad
+ALTER TABLE ONLY localidad
     ADD CONSTRAINT localidad_pkey PRIMARY KEY (id);
 
 
@@ -197125,7 +197125,7 @@ ALTER TABLE ONLY public.localidad
 -- Name: precio precio_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.precio
+ALTER TABLE ONLY precio
     ADD CONSTRAINT precio_pkey PRIMARY KEY (id);
 
 
@@ -197134,7 +197134,7 @@ ALTER TABLE ONLY public.precio
 -- Name: producto producto_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.producto
+ALTER TABLE ONLY producto
     ADD CONSTRAINT producto_pkey PRIMARY KEY (id);
 
 
@@ -197143,7 +197143,7 @@ ALTER TABLE ONLY public.producto
 -- Name: tienda tienda_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.tienda
+ALTER TABLE ONLY tienda
     ADD CONSTRAINT tienda_pkey PRIMARY KEY (id);
 
 
@@ -197152,8 +197152,8 @@ ALTER TABLE ONLY public.tienda
 -- Name: barrio barrio_loc_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.barrio
-    ADD CONSTRAINT barrio_loc_id_fkey FOREIGN KEY (loc_id) REFERENCES public.localidad(id);
+ALTER TABLE ONLY barrio
+    ADD CONSTRAINT barrio_loc_id_fkey FOREIGN KEY (loc_id) REFERENCES localidad(id);
 
 
 --
@@ -197161,8 +197161,8 @@ ALTER TABLE ONLY public.barrio
 -- Name: ciudad ciudad_dep_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.ciudad
-    ADD CONSTRAINT ciudad_dep_id_fkey FOREIGN KEY (dep_id) REFERENCES public.departamento(id);
+ALTER TABLE ONLY ciudad
+    ADD CONSTRAINT ciudad_dep_id_fkey FOREIGN KEY (dep_id) REFERENCES departamento(id);
 
 
 --
@@ -197170,8 +197170,8 @@ ALTER TABLE ONLY public.ciudad
 -- Name: detalle detalle_fac_num_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.detalle
-    ADD CONSTRAINT detalle_fac_num_fkey FOREIGN KEY (fac_num) REFERENCES public.factura(numero);
+ALTER TABLE ONLY detalle
+    ADD CONSTRAINT detalle_fac_num_fkey FOREIGN KEY (fac_num) REFERENCES factura(numero);
 
 
 --
@@ -197179,8 +197179,8 @@ ALTER TABLE ONLY public.detalle
 -- Name: detalle detalle_pro_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.detalle
-    ADD CONSTRAINT detalle_pro_id_fkey FOREIGN KEY (pro_id) REFERENCES public.producto(id);
+ALTER TABLE ONLY detalle
+    ADD CONSTRAINT detalle_pro_id_fkey FOREIGN KEY (pro_id) REFERENCES producto(id);
 
 
 --
@@ -197188,8 +197188,8 @@ ALTER TABLE ONLY public.detalle
 -- Name: factura factura_cli_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.factura
-    ADD CONSTRAINT factura_cli_id_fkey FOREIGN KEY (cli_id) REFERENCES public.cliente(id);
+ALTER TABLE ONLY factura
+    ADD CONSTRAINT factura_cli_id_fkey FOREIGN KEY (cli_id) REFERENCES cliente(id);
 
 
 --
@@ -197197,8 +197197,8 @@ ALTER TABLE ONLY public.factura
 -- Name: factura factura_tie_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.factura
-    ADD CONSTRAINT factura_tie_id_fkey FOREIGN KEY (tie_id) REFERENCES public.tienda(id);
+ALTER TABLE ONLY factura
+    ADD CONSTRAINT factura_tie_id_fkey FOREIGN KEY (tie_id) REFERENCES tienda(id);
 
 
 --
@@ -197206,8 +197206,8 @@ ALTER TABLE ONLY public.factura
 -- Name: localidad localidad_ciu_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.localidad
-    ADD CONSTRAINT localidad_ciu_id_fkey FOREIGN KEY (ciu_id) REFERENCES public.ciudad(id);
+ALTER TABLE ONLY localidad
+    ADD CONSTRAINT localidad_ciu_id_fkey FOREIGN KEY (ciu_id) REFERENCES ciudad(id);
 
 
 --
@@ -197215,8 +197215,8 @@ ALTER TABLE ONLY public.localidad
 -- Name: precio precio_pro_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.precio
-    ADD CONSTRAINT precio_pro_id_fkey FOREIGN KEY (pro_id) REFERENCES public.producto(id);
+ALTER TABLE ONLY precio
+    ADD CONSTRAINT precio_pro_id_fkey FOREIGN KEY (pro_id) REFERENCES producto(id);
 
 
 --
@@ -197224,8 +197224,8 @@ ALTER TABLE ONLY public.precio
 -- Name: producto producto_cat_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.producto
-    ADD CONSTRAINT producto_cat_id_fkey FOREIGN KEY (cat_id) REFERENCES public.categoria(id);
+ALTER TABLE ONLY producto
+    ADD CONSTRAINT producto_cat_id_fkey FOREIGN KEY (cat_id) REFERENCES categoria(id);
 
 
 --
@@ -197233,8 +197233,8 @@ ALTER TABLE ONLY public.producto
 -- Name: tienda tienda_bar_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.tienda
-    ADD CONSTRAINT tienda_bar_id_fkey FOREIGN KEY (bar_id) REFERENCES public.barrio(id);
+ALTER TABLE ONLY tienda
+    ADD CONSTRAINT tienda_bar_id_fkey FOREIGN KEY (bar_id) REFERENCES barrio(id);
 
 
 --
@@ -197255,7 +197255,7 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 -- Name: TABLE barrio; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.barrio TO parcial;
+GRANT SELECT ON TABLE barrio TO postgres;
 
 
 --
@@ -197264,7 +197264,7 @@ GRANT SELECT ON TABLE public.barrio TO parcial;
 -- Name: TABLE categoria; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.categoria TO parcial;
+GRANT SELECT ON TABLE categoria TO postgres;
 
 
 --
@@ -197273,7 +197273,7 @@ GRANT SELECT ON TABLE public.categoria TO parcial;
 -- Name: TABLE ciudad; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.ciudad TO parcial;
+GRANT SELECT ON TABLE ciudad TO postgres;
 
 
 --
@@ -197282,7 +197282,7 @@ GRANT SELECT ON TABLE public.ciudad TO parcial;
 -- Name: TABLE cliente; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.cliente TO parcial;
+GRANT SELECT ON TABLE cliente TO postgres;
 
 
 --
@@ -197291,7 +197291,7 @@ GRANT SELECT ON TABLE public.cliente TO parcial;
 -- Name: TABLE departamento; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.departamento TO parcial;
+GRANT SELECT ON TABLE departamento TO postgres;
 
 
 --
@@ -197300,7 +197300,7 @@ GRANT SELECT ON TABLE public.departamento TO parcial;
 -- Name: TABLE detalle; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.detalle TO parcial;
+GRANT SELECT ON TABLE detalle TO postgres;
 
 
 --
@@ -197309,7 +197309,7 @@ GRANT SELECT ON TABLE public.detalle TO parcial;
 -- Name: TABLE factura; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.factura TO parcial;
+GRANT SELECT ON TABLE factura TO postgres;
 
 
 --
@@ -197318,7 +197318,7 @@ GRANT SELECT ON TABLE public.factura TO parcial;
 -- Name: TABLE localidad; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.localidad TO parcial;
+GRANT SELECT ON TABLE localidad TO postgres;
 
 
 --
@@ -197327,7 +197327,7 @@ GRANT SELECT ON TABLE public.localidad TO parcial;
 -- Name: TABLE precio; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.precio TO parcial;
+GRANT SELECT ON TABLE precio TO postgres;
 
 
 --
@@ -197336,7 +197336,7 @@ GRANT SELECT ON TABLE public.precio TO parcial;
 -- Name: TABLE producto; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.producto TO parcial;
+GRANT SELECT ON TABLE producto TO postgres;
 
 
 --
@@ -197345,7 +197345,7 @@ GRANT SELECT ON TABLE public.producto TO parcial;
 -- Name: TABLE tienda; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.tienda TO parcial;
+GRANT SELECT ON TABLE tienda TO postgres;
 
 
 -- Completed on 2020-12-02 14:07:43
